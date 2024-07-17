@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Weather App</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous" />
+  <link rel="stylesheet" href="style.css">
+  <style>
+
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark my-1">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Weather App</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse search-container" id="navbarSupportedContent">
+        <form class="d-flex search-form" role="search">
+          <input id="cityname" class="form-control me-2" type="search" placeholder="Enter city name"
+            aria-label="Search">
+          <button class="btn btn-outline-success" type="submit" onclick="getWeather()">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="container px-4 py-5" id="custom-cards">
+      <h1 class="pb-2 border-bottom text-center text-color-dark">Current Weather Forecasts🌦️</h1>
+      <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
+        <div class="col">
+          <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg">
+            <h3 class="text-center py-3">Temperature</h3>
+            <div class="d-flex flex-column h-100 p-4 pb-3 py-5 text-white text-shadow-1">
+              <ul class="">
+                <li class="fst-italic">
+                  <h5> Temperature is</h5> <span id="temp"></span>
+                </li>
+                <br>
+                <li class="fst-italic">
+                  <h5> MAX-temperature is</h5> <span id="temp_max"></span>
+                </li>
+                <br>
+                <li class="fst-italic">
+                  <h5> MIN-temperature is</h5> <span id="temp_min"></span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg">
+            <h3 class="text-center py-3">Humidity & Pressure</h3>
+            <div class="d-flex flex-column h-100 p-4 pb-3 py-5 text-white text-shadow-1">
+              <ul class="">
+                <li class="fst-italic">
+                  <h5> Humidity is</h5> <span id="humidity"></span>
+                </li>
+                <br>
+                <li class="fst-italic">
+                  <h5> Pressure is</h5> <span id="pressure"></span>
+                </li>
+                <br>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg">
+            <h3 class="text-center py-3">Wind & Visibility</h3>
+            <div class="d-flex flex-column h-100 p-4 pb-3 py-5 text-white text-shadow-1">
+              <ul class="">
+                <li class="fst-italic">
+                  <h5> Visibility is</h5> <span id="visibility"></span>
+                </li>
+                <br>
+                <li class="fst-italic">
+                  <h5> Wind Speed is</h5> <span id="Wind_speed"></span>
+                </li>
+                <br>
+                <li class="fst-italic">
+                  <h5> Sky has </h5> <span id="clouds"></span>
+                </li>
+                <br>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
